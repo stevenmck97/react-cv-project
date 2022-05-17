@@ -5,100 +5,153 @@ class App extends Component {
         super();
 
         this.state = {
-            general: {
-                name: "",
-                email: "",
-                phoneNo: "",
-            },
-            education: {
-                school: "",
-                course: "",
-                edDuration: "",
-            },
-            work: {
-                company: "",
-                position: "",
-                tasks: "",
-                workDuration: "",
-            },
+            name: "",
+            email: "",
+            phoneNo: "",
+
+            school: "",
+            course: "",
+            edDuration: "",
+
+            company: "",
+            position: "",
+            tasks: "",
+            workDuration: "",
         };
     }
 
+    handleInputChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value,
+        });
+    };
+
     render() {
-        const { name, email, phoneNo } = this.state.general;
-        const { school, course, edDuration } = this.state.education;
-        const { company, position, tasks, workDuration } = this.state.work;
+        const {
+            name,
+            email,
+            phoneNo,
+            school,
+            course,
+            edDuration,
+            company,
+            position,
+            tasks,
+            workDuration,
+        } = this.state;
+        // const { school, course, edDuration } = this.state.education;
+        // const { company, position, tasks, workDuration } = this.state.work;
 
         return (
             <div>
                 <form>
-                    <div>
-                        <h1>Personal Details</h1>
-                        <label htmlFor="genName">
-                            Name:
-                            <input type="text" value={name} id="genName" />
-                        </label>
-                        <label htmlFor="genEmail">
-                            Email:
-                            <input type="email" value={email} id="genEmail" />
-                        </label>
-                        <label htmlFor="genPhone">
-                            Phone Number:
-                            <input
-                                type="number"
-                                value={phoneNo}
-                                id="genPhone"
-                            />
-                        </label>
-                    </div>
+                    <h1>Personal Details</h1>
+                    <label htmlFor="genName">
+                        Name:
+                        <input
+                            name="name"
+                            type="text"
+                            value={name}
+                            id="genName"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
+                    <label htmlFor="genEmail">
+                        Email:
+                        <input
+                            name="email"
+                            type="email"
+                            value={email}
+                            id="genEmail"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
+                    <label htmlFor="genPhone">
+                        Phone Number:
+                        <input
+                            name="phoneNo"
+                            type="number"
+                            value={phoneNo}
+                            id="genPhone"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
 
-                    <div>
-                        <h1>Education</h1>
-                        <label htmlFor="school">
-                            School Name:
-                            <input type="text" value={school} id="school" />
-                        </label>
-                        <label htmlFor="course">
-                            Course Name:
-                            <input type="text" value={course} id="course" />
-                        </label>
-                        <label htmlFor="edDuration">
-                            Duration:
-                            <input
-                                type="text"
-                                value={edDuration}
-                                id="edDuration"
-                            />
-                        </label>
-                    </div>
+                    <h1>Education</h1>
+                    <label htmlFor="school">
+                        School Name:
+                        <input
+                            name="school"
+                            type="text"
+                            value={school}
+                            id="school"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
+                    <label htmlFor="course">
+                        Course Name:
+                        <input
+                            name="course"
+                            type="text"
+                            value={course}
+                            id="course"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
+                    <label htmlFor="edDuration">
+                        Duration:
+                        <input
+                            name="edDuration"
+                            type="text"
+                            value={edDuration}
+                            id="edDuration"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
 
-                    <div>
-                        <h1>Work Experience</h1>
-                        <label htmlFor="company">
-                            Company:
-                            <input type="text" value={company} id="company" />
-                        </label>
-                        <label htmlFor="position">
-                            Position:
-                            <input type="text" value={position} id="position" />
-                        </label>
-                        <label htmlFor="tasks">
-                            Tasks:
-                            <input type="text" value={tasks} id="tasks" />
-                        </label>
-                        <label htmlFor="workDuration">
-                            Duration:
-                            <input
-                                type="text"
-                                value={workDuration}
-                                id="workDuration"
-                            />
-                        </label>
-                    </div>
+                    <h1>Work Experience</h1>
+                    <label htmlFor="company">
+                        Company:
+                        <input
+                            name="company"
+                            type="text"
+                            value={company}
+                            id="company"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
+                    <label htmlFor="position">
+                        Position:
+                        <input
+                            name="position"
+                            type="text"
+                            value={position}
+                            id="position"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
+                    <label htmlFor="tasks">
+                        Tasks:
+                        <input
+                            name="tasks"
+                            type="text"
+                            value={tasks}
+                            id="tasks"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
+                    <label htmlFor="workDuration">
+                        Duration:
+                        <input
+                            name="workDuration"
+                            type="text"
+                            value={workDuration}
+                            id="workDuration"
+                            onChange={this.handleInputChange}
+                        />
+                    </label>
 
-                    <div>
-                        <button type="submit">Create CV</button>
-                    </div>
+                    <button type="submit">Create CV</button>
                 </form>
             </div>
         );
