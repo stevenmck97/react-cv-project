@@ -1,7 +1,7 @@
 import React from "react";
 
-const General = (props) => {
-    const { fullName, email, phoneNo, onChange } = props;
+const General = ({ fullName, email, phoneNo, onChange }) => {
+    // const { fullName, email, phoneNo, onChange } = props;
 
     return (
         <div>

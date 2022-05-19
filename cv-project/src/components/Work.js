@@ -1,7 +1,7 @@
 import React from "react";
 
-const Work = (props) => {
-    const { company, position, tasks, workDuration, onChange } = props;
+const Work = ({ company, position, tasks, workDuration, onChange }) => {
+    // const { company, position, tasks, workDuration, onChange } = props;
 
     return (
         <div>

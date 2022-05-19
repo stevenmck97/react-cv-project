@@ -1,7 +1,7 @@
 import React from "react";
 
-const Education = (props) => {
-    const { school, course, edDuration, onChange } = props;
+const Education = ({ school, course, edDuration, onChange }) => {
+    // const { school, course, edDuration, onChange } = props;
 
     return (
         <div>
